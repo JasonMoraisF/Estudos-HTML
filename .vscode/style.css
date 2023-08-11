@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/569578-pixel-night.jpg);
+  --bg-url: url(./assets/night-pixel-art.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -188,7 +188,7 @@ footer {
 }
 
 /* media queries */
-@media (min-width: 700px) {
+/* @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
     width: 100%;
@@ -196,7 +196,7 @@ footer {
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
   }
-}
+} */
 
 /* animation */
 @keyframes slide-in {

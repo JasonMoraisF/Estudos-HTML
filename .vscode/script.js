@@ -14,9 +14,6 @@ function toggleMode(){
   img.setAttribute('src', './assets/Mobile/Avatar.png')
   }
 
-
-
-
   // substituir a imagem
 
 }
