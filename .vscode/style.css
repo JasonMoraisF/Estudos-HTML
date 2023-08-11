@@ -27,15 +27,16 @@
 /* body */
 
 body {
-  /*
-  background-image: url(./assets/bg-mobile.jpg);
+  background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  */
+  height: 100vh;
 
-  /*background: color image repeat position/size*/
-  background: var(--bg-url) no-repeat top center;
+  background: color image repeat position/size;
+
+  /* background: var(--bg-url) no-repeat top center;
+  height: 100vh; */
 }
 
 body * {
@@ -67,7 +68,7 @@ body * {
   width: 112px;
 }
 
-.light #profile img{
+.light #profile img {
   border-radius: 50%;
 }
 
@@ -97,12 +98,16 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.3s;
 }
 
 .light #switch button {
+  animation: slide-in 0.3s forwards;
+}
 
-  right: 0;
-  left: initial;
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -180,4 +185,34 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+    width: 100%;
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
